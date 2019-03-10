@@ -1650,18 +1650,15 @@ path@^0.12.7:
     process "^0.11.1"
     util "^0.10.3"
 
-"pdftohtmljs@git+https://github.com/fagbokforlaget/pdftohtmljs.git":
+pdftohtmljs@^0.5.2:
   version "0.5.2"
-  resolved "git+https://github.com/fagbokforlaget/pdftohtmljs.git#fe9a367cfda748b92a84f44cfd4a082cb6c51faa"
+  resolved "https://registry.yarnpkg.com/pdftohtmljs/-/pdftohtmljs-0.5.2.tgz#bded21de0237dbf2c4d4e355587ece3346c5c808"
+  integrity sha512-bzrfvUgxRZyq2KctnJyEiePHOm8uJOIfbnvxX1Oe/EyaQmhQ3J6CjvVd2M++jQfwNrSOfNVWe/mRFTdtvjGsEA==
 
 pify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
-
-"poppler@https://anongit.freedesktop.org/git/poppler/poppler.git":
-  version "0.0.0"
-  resolved "https://anongit.freedesktop.org/git/poppler/poppler.git#148c881286049dde9812beecfed8a7636e6f6def"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"

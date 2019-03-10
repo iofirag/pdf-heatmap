@@ -11,16 +11,13 @@
     "start": "nodemon --exec ts-node src/index.ts localhost 8080"
   },
   "dependencies": {
-    "application-name": "https://github.com/yourtion/Demo_PDFtoHTML.git",
     "body-parser": "1.18.3",
     "builtin-status-codes": "3.0.0",
     "cors": "2.8.5",
     "express": "4.16.4",
     "express-fileupload": "1.1.2-alpha.1",
     "mongoose": "5.4.8",
-    "path": "^0.12.7",
-    "pdftohtmljs": "git+https://github.com/fagbokforlaget/pdftohtmljs.git",
-    "poppler": "https://anongit.freedesktop.org/git/poppler/poppler.git",
+    "pdftohtmljs": "^0.5.2",
     "yarn": "^1.13.0"
   },
   "devDependencies": {
