@@ -2,19 +2,19 @@ import { Request, Response } from "express";
 import * as fs from 'fs';
 import Utils from '../utils/utils';
 import * as pdftohtml from 'pdftohtmljs';
-// const util = require('util');
-// const exec = util.promisify(require('child_process').exec);
 
 export class PdfController {
   public static upload = async (req: any, res: Response) => {
     const username = 'admin';
+    const pdf2htmlexLibLocation: string = 'C:/pdf2htmlEX-win32-0.14.6-upx-with-poppler-data';
+    const destLocation: string = `public/${username}`;
 
     // Check for any file key
     if (!req.files || Object.keys(req.files).length == 0) {
       return Utils.handleError('No files were uploaded.', res);
     }
     
-    await fs.mkdir(`public/${username}`, { recursive: true }, (err) => {
+    await fs.mkdir(destLocation, { recursive: true }, (err) => {
       if (err) return Utils.handleError(err, res);  
     })
 
@@ -22,9 +22,6 @@ export class PdfController {
     console.log('File uploaded!', req.files.pdf);
 
     const {tempFilePath, name, size, md5} = req.files.pdf;
-    
-    const pdf2htmlexLibLocation: string = 'C:/pdf2htmlEX-win32-0.14.6-upx-with-poppler-data';
-    const destLocation: string = `public/${username}`;
     const htmlFileName = `${md5}${Date.now()}.html`;
 
     let converter = new pdftohtml(`${tempFilePath}`, htmlFileName);
@@ -57,7 +54,8 @@ export class PdfController {
   };
 }
 
-
+// const util = require('util');
+// const exec = util.promisify(require('child_process').exec);
     /*
     const username = 'admin';
     const pdf2htmlexLibLocation: string = 'C:/pdf2htmlEX-win32-0.14.6-upx-with-poppler-data';
